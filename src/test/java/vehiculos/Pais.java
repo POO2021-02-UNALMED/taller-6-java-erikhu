@@ -23,7 +23,11 @@ public class Pais {
 			long cantVehiculos = vehiculos
 					.stream()
 					.filter((vehiculo) -> vehiculo.getFabricante().getPais().getNombre().equals(nombre)).count();
-			if(cantVehiculos > cant) pais = new Pais(nombre);
+			System.out.println(cantVehiculos + " " + nombre);
+			if(cantVehiculos > cant) {
+				cant = cantVehiculos;
+				pais = new Pais(nombre);
+			}
 		}
 		
 		return pais;

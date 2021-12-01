@@ -26,6 +26,7 @@ public class Vehiculo {
 		this.traccion = traccion;
 		this.fabricante = fabricante;
 		Pais.vehiculos.add(this);
+		Fabricante.vehiculos.add(this);
 	}
 
 	public static int getCantidadVehiculos() {
